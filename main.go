@@ -19,6 +19,7 @@ func main() {
 	handlers.LoadTemplates()
 	router := mux.NewRouter()
 	router.HandleFunc("/", handlers.IndexPageHandler)
+	router.HandleFunc("/about", handlers.AboutPageHandler)
 
 	log.Fatal(http.ListenAndServe(":" + port, router))
 }
